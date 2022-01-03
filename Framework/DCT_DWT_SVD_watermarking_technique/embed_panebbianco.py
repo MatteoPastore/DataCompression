@@ -5,11 +5,32 @@ import pywt
 from scipy.fft import dct, idct
 import numpy as np
 import functions as f
-
+from os import listdir
+from os.path import isfile, join
+from scipy.signal import convolve2d
+import math
 #                LL    LH   HL   HH
 alphaPaper    = [13.7,   8,  8,  8] # 30 20 20 20
 extractWeight = [0.45, 0.2, 0.2, 0.15]
 blockSizeDwtDctSvd = 8
+
+def wpsnr(img1, img2):
+  img1 = np.float32(img1)/255.0
+  img2 = np.float32(img2)/255.0
+
+  difference = img1-img2
+  same = not np.any(difference)
+  if same is True:
+      return 9999999
+  csf = np.genfromtxt('./DCT_DWT_SVD_watermarking_technique/csf.csv', delimiter=',')
+  ew = convolve2d(difference, np.rot90(csf,2), mode='valid')
+  decibels = 20.0*np.log10(1.0/math.sqrt(np.mean(np.mean(ew**2))))
+  return decibels
+
+
+def imageOnFolder(mypath) :
+    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    return onlyfiles
 
 def dctCoeffMatrix(fromDwt):
     if(fromDwt.shape[0] != fromDwt.shape[1]):
@@ -127,23 +148,25 @@ def embedded(originalImg, watermark):
 # @return watermarkImage    Waterarked Image
 def embeddedFinalMethod(originalImg, watermark):
     watermarkedImgA = embedded(originalImg, watermark)
-    cv2.imwrite('../Images/temp.bmp', watermarkedImgA)
-    watermarkedImg = cv2.imread('../Images/temp.bmp', 0)
+    cv2.imwrite('./Images/temp.bmp', watermarkedImgA)
+    watermarkedImg = cv2.imread('./Images/temp.bmp', 0)
     return watermarkedImg
 
 
 def main():
+
     try:
-        imagesToWatermark = f.imageOnFolder('../originalImages/')
-        watermark=np.load('../DCT_DWT_SVD_watermarking_technique/Utilities/panebbianco.npy')
+        imagesToWatermark = imageOnFolder('./originalImages/')
+        watermark=np.load('watermark.npy')
         for imagePath in imagesToWatermark:
+
             imageName = imagePath.split('.')[0]
-            imagePath = "../originalImages/" + imagePath
+            imagePath = "./originalImages/" + imagePath
             originalImg = cv2.imread(imagePath, 0)
             watermarkedImg = embedded(originalImg, watermark)
-            cv2.imwrite(f'../watermarkedImages/{imageName}_panebbianco.bmp', watermarkedImg)
-            cv2.imwrite(f'../imagesToAttack/panebbianco_{imageName}.bmp', watermarkedImg)
-            print(f'WPSNR {imageName}: {f.wpsnr(originalImg, watermarkedImg)} dB')
+            cv2.imwrite(f'./watermarkedImages/{imageName}_panebbianco.bmp', watermarkedImg)
+            cv2.imwrite(f'./imagesToAttack/panebbianco_{imageName}.bmp', watermarkedImg)
+            print(f'WPSNR {imageName}: {wpsnr(originalImg, watermarkedImg)} dB')
     except ValueError as e:
         print("\x1b[6;31mError: " + str(e) + "\x1b[0m")
 
