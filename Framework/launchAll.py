@@ -2,6 +2,9 @@ from Blind_Watermark import encode, decode
 from DWT_DCT_Image_Watermarking import DWT_DCT_technique
 from DWT_SVD import DWT_SVD_technique
 from Robust_Watermarking import embed, extract
+from DCT_DWT_SVD_watermarking_technique import embed_panebbianco
+from DCT_DWT_SVD_watermarking_technique import functions as f
+
 import functionsAlgorithms
 import glob
 '''
@@ -68,6 +71,8 @@ def switch(val, watermark):
     if val == "DWT_DCT_SVD":
         for path in image_path:
             functionsAlgorithms.DWT_DCT_SVD(path, watermark)
+    if val == "DCT_DWT_SVD_npy":
+        embed_panebbianco.main()
 
 
 
@@ -83,10 +88,11 @@ options = {"1": "DFT-BlindWatermark",
            "7": "DFTonly",
            "8": "SVDonly",
            "9": "DWT_SVD",
-           "10": "DWT_DCT_SVD"
+           "10": "DWT_DCT_SVD",
+           "11": "DCT_DWT_SVD_npy"
 
                }
-val = input('What \type of embedding you want to perform?\n1.DFT-BlindWatermark\n2.DWT-DCT Watermarking\n3.DWT-SVD Watermarking\n4.DCT Watermarking\n5.DWTonly\n6.DCTonly\n7.DFTonly\n8.SVDonly\n9.DWT_SVD\n10.DWT_DCT_SVD')
+val = input('What \type of embedding you want to perform?\n1.DFT-BlindWatermark\n2.DWT-DCT Watermarking\n3.DWT-SVD Watermarking\n4.DCT Watermarking\n5.DWTonly\n6.DCTonly\n7.DFTonly\n8.SVDonly\n9.DWT_SVD\n10.DWT_DCT_SVD\n11.DCT_DWT_SVD_npy')
 print("Running " + options[val])
 
 switch(options[val], watermark)
