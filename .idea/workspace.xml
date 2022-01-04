@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="365f9ce1-f742-47df-908c-7a73ab294f41" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/check_diffs.py" beforeDir="false" afterPath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/check_diffs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/tmp.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/tmp.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedcameraman.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedhouse.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedjetplane.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlake.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_color_256.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_color_512.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_gray_256.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_gray_512.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlivingroom.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedmandril_color.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedmandril_gray.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpeppers_color.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpeppers_gray.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpirate.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwalkbridge.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwoman_blonde.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwoman_darkhair.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedcameraman.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedhouse.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedjetplane.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlake.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_color_256.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_color_512.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_gray_256.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_gray_512.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlivingroom.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedmandril_color.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedmandril_gray.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpeppers_color.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpeppers_gray.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpirate.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwalkbridge.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwoman_blonde.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwoman_darkhair.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique/tmp.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique/tmp.bmp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22sYDFmKOMciAT01oSSP2aA17j3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.test_attacks (1)">
+    <configuration name="test_attacks (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DataCompression" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique/test_attacks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_attacks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DataCompression" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/test_attacks.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_attacks (1)" />
+        <item itemvalue="Python.test_attacks" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="365f9ce1-f742-47df-908c-7a73ab294f41" name="Changes" comment="" />
+      <created>1640627641651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640627641651</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
