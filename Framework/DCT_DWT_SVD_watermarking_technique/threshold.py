@@ -11,7 +11,7 @@ from embed import embeddedFinalMethod
 from detection_panebbianco import extractWatermark, similarity
 import watermarkNpy512
 
-methodName = "panebbianco_threshold_absTH"
+methodName = "threshold"
 numTestImages = 2 # The number of images to be tested from 0 to 101
 watermarkNpy512.main()
 
@@ -115,12 +115,12 @@ def random_attack(img):
   return attacked
 
 def main():
-    test="../Testing/Prova.jpeg"
+
     try:
         scores = []
         labels = []
         watermark=np.load('watermark.npy')
-        test=cv2.imread(test, 0)
+
         for i in range(numTestImages):
             print(f'\r{"{:.2f}".format(100*i/numTestImages)} %', end='')
 
@@ -128,17 +128,18 @@ def main():
             print('../Testing/'+ str(i).zfill(4) +'.bmp')
 
 
-            fakemark = np.random.uniform(0.0, 1.0, 512)
+            fakemark = np.random.uniform(0.0, 1.0, 1024)
             fakemark = np.uint8(np.rint(fakemark))
-            #watermarkedImg = embeddedFinalMethod(img, watermark)
-            #attackedImg = random_attack(watermarkedImg)
-            #watExtracted = extractWatermark(img, attackedImg)
+            watermarkedImg = embeddedFinalMethod(img, watermark)
+            attackedImg = random_attack(watermarkedImg)
+            watExtracted = extractWatermark(img, attackedImg)
+            watermark1024 = watermark.flatten()
             #cv2.imwrite("../Testing/Test.jpeg", watExtracted)
-            print("ok")
-            scores.append(similarity(watermark, test))
-            print("ok")
+
+            scores.append(similarity(watermark1024, watExtracted))
+            cv2.imwrite("../Testing/Prova.jpeg", watermarkedImg)
             labels.append(1)
-            scores.append(similarity(fakemark, test))
+            scores.append(similarity(fakemark, watExtracted))
             labels.append(0)
 
         print('\r100.00 %', end='')

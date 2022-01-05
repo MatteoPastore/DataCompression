@@ -62,9 +62,12 @@ def extractWatermark(original, watermarkedImage):
     extractedWatermarkHL = extractDWT(HL_original,HL_watermarked, alphaPaper[2])
     extractedWatermarkHH = extractDWT(HH_original,HH_watermarked, alphaPaper[3])
 
+
     returnWatermark = extractedWatermarkLL*extractWeight[0]+extractedWatermarkLH*extractWeight[1]+extractedWatermarkHL*extractWeight[2]+extractedWatermarkHH*extractWeight[3]
     # returnWatermark = returnWatermark.round()
+
     returnWatermark = returnWatermark.flatten()
+
     return returnWatermark
 
 

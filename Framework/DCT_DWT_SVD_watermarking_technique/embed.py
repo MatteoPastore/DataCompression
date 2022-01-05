@@ -148,8 +148,8 @@ def embedded(originalImg, watermark):
 # @return watermarkImage    Waterarked Image
 def embeddedFinalMethod(originalImg, watermark):
     watermarkedImgA = embedded(originalImg, watermark)
-    cv2.imwrite('./Images/temp.bmp', watermarkedImgA)
-    watermarkedImg = cv2.imread('./Images/temp.bmp', 0)
+    cv2.imwrite('../Testing/temp.bmp', watermarkedImgA)
+    watermarkedImg = cv2.imread('../Testing/temp.bmp', 0)
     return watermarkedImg
 
 
