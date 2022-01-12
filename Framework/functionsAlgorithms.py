@@ -5,7 +5,7 @@ import random
 import math
 import cmath
 
-
+#La funzione fftshift sposta le frequenze con componente 0 al centro, successivamente fft2 esegue la trasformata di Fourier. Ifft2 invece fa la trasformata di Fourier inversa.
 def applyWatermarkDFT(imageMatrix, watermarkMatrix, alpha):
     shiftedDFT = np.fft.fftshift(np.fft.fft2(imageMatrix))
     watermarkedDFT = shiftedDFT + alpha * watermarkMatrix
@@ -56,7 +56,7 @@ def DWT(coverImage, watermarkImage):
     watermarkImage = np.float32(watermarkImage)
     watermarkImage /= 255;
 
-    # Embedding
+    # Embedding con idwt2
     coeffW = (0.4 * cA + 0.1 * watermarkImage, (cH, cV, cD))
     watermarkedImage = pywt.idwt2(coeffW, 'haar')
 
