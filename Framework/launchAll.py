@@ -19,6 +19,7 @@ watermark="./Watermark/watermark.png"
 def switch(val, watermark):
     image_path=glob.glob("./Images/"+"*.jpeg", recursive=True)
 
+#Inizio dello switch che lancia in esecuzione la tecnica scelta, fornendo come parametri il path delle immagini al quale applicare il watermark
 
     if val == "DFT-BlindWatermark":
         for path in image_path:
@@ -105,6 +106,7 @@ print("DONE")
 
 
 
+#Inizio dello switch che lancia in esecuzione le tecniche di test scelte
 
 def switchTesting(val):
     image_path=glob.glob("./imagesToAttack/"+"*.*", recursive=True)
