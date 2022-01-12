@@ -1,7 +1,7 @@
 import os
 import cv2
 import matplotlib.pyplot as plt
-import functions as f
+from DCT_DWT_SVD_watermarking_technique import functions as f
 from textwrap import wrap
 from os import listdir
 from os.path import isfile, join
@@ -33,7 +33,7 @@ def main():
         watermarked = cv2.imread(watermarkedPath, 0)
 
 
-        print(f'Testing {imageName} of the group {groupName}...')
+        print(f'Testing image n°{i+1}, {imageName} of the group {groupName} ')
 
         original = cv2.imread(originalPath, 0)
         original = cv2.resize(original, (512, 512))
@@ -47,8 +47,9 @@ def main():
 
 
         i += 1
-        plt.subplot(7, 8, i)
+
+        plt.subplot(11, 18, i)
         plt.title(f'{imageName}_{groupName}', fontsize=5)
-        plt.savefig('./Testing/Check_Diffs/Diffs.png', dpi = 100, bbox_inches='tight')
+        plt.savefig('./Testing/Check_Diffs/Diffs.png', dpi = 100)
         plt.imshow(diff)
     plt.show()

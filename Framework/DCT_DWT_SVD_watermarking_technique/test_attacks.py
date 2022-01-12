@@ -2,7 +2,7 @@ from DCT_DWT_SVD_watermarking_technique import attacks
 from DCT_DWT_SVD_watermarking_technique.embed import *
 
 from DCT_DWT_SVD_watermarking_technique.wpsnr import *
-from DCT_DWT_SVD_watermarking_technique import detection_panebbianco
+from DCT_DWT_SVD_watermarking_technique import detection
 
 import cv2
 
@@ -16,7 +16,6 @@ def imageOnFolder(mypath) :
 def main():
 
     imagesToAttack = imageOnFolder('./imagesToAttack/')
-
     results = []
     thisImageResults = []
     attacksFunctions = [attacks.awgn, attacks.blur, attacks.sharpening, attacks.median, attacks.resizing, attacks.jpeg_compression]
@@ -57,7 +56,7 @@ def main():
                 res_att = np.rint(res_att).astype(int)
                 cv2.imwrite('./DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp', res_att)
 
-                found, wpsnr =detection_panebbianco.detection(originalPath, watermarkedPath, './DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp')
+                found, wpsnr =detection.detection(originalPath, watermarkedPath, './DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp')
 
 
                 if wpsnr < 35:
@@ -86,9 +85,9 @@ def main():
             best_attack = sorted(thisImageResults, key=lambda x:x["WPSNR"])[-1]
             watermarked = cv2.imread(best_attack["imagePath"], 0)
             attackedImage = attacksFunctions[best_attack["methodCode"]](watermarked, best_attack["params"])
-            cv2.imwrite('./attackedimages/dcexam_' +  best_attack["groupName"] + "_" + best_attack["imageName"], res_att)
+            cv2.imwrite('./Testing/AttackedImages/dcexam_' +  best_attack["groupName"] + "_" + best_attack["imageName"], res_att)
             saveThis = [best_attack["imageName"], best_attack["groupName"], best_attack["WPSNR"], f'{best_attack["methodName"]} param: {best_attack["params"]}']
-            attacks.append_list_as_row('./Testing/attackedimages/attacks.csv', saveThis)
+            attacks.append_list_as_row('./Testing/AttackedImages/attacks.csv', saveThis)
 
     print(results)
     print("\n")

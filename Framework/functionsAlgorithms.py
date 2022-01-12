@@ -61,6 +61,7 @@ def DWT(coverImage, watermarkImage):
     watermarkedImage = pywt.idwt2(coeffW, 'haar')
 
     cv2.imwrite("./DWTonlyResults/Watermarked/DWTonly_"+path[9:], 255*watermarkedImage)
+    cv2.imwrite("./imagesToAttack/" + "DWTonly_" + path[9:], 255*watermarkedImage)
 
     # Extraction
     coeffWM = pywt.dwt2(watermarkedImage, 'haar')
@@ -71,7 +72,6 @@ def DWT(coverImage, watermarkImage):
     extracted = np.uint8(extracted)
 
     cv2.imwrite("./DWTonlyResults/Extracted/DWTonly_" + path[9:], extracted)
-    cv2.imwrite("./imagesToAttack/" + "DWTonly_" + path[9:], extracted)
 
 def DCT(coverImage, watermarkImage):
     print("Running on " + coverImage[9:])
@@ -267,7 +267,7 @@ def DWT_SVD(coverImage, watermarkImage):
     # Inverse DWT to get watermarked image
     watermarkedImage = pywt.idwt2(coeff, 'haar')
     cv2.imwrite("./DWT_SVDresultsMode2/Watermarked/DWT-SVD-Mode2_" + path[9:], watermarkedImage*255)
-    cv2.imwrite("./imagesToAttack/" + "DWT-SVD-Mode2" + path[9:], watermarkedImage*255)
+    cv2.imwrite("./imagesToAttack/" + "DWT-SVD-Mode2_" + path[9:], watermarkedImage*255)
 
 
 def DWT_DCT_SVD(coverImage, watermarkImage):
@@ -309,7 +309,7 @@ def DWT_DCT_SVD(coverImage, watermarkImage):
     widct = cv2.idct(Wmodi)
     watermarkedImage = pywt.idwt2((widct, (cH, cV, cD)), 'haar')
     cv2.imwrite("./DWT_DCT_SVDresults/Watermarked/DWT-DCT-SVD_" + path[9:], watermarkedImage*255)
-    cv2.imwrite("./imagesToAttack/" + "DWT-DCT-SVD" + path[9:], watermarkedImage*255)
+    cv2.imwrite("./imagesToAttack/" + "DWT-DCT-SVD_" + path[9:], watermarkedImage*255)
 
 
 if __name__ == "__main__":

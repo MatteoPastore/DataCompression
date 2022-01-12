@@ -92,7 +92,7 @@ def calcBER(data1, data2):
 def main(image):
 
     algorithmName = image.split('_')[0]
-    imageName= image.split('_')[1]
+    imageName = image.split('_')[1]
 
 
 

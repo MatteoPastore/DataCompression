@@ -4,7 +4,7 @@ import cv2
 import pywt
 from scipy.fft import dct, idct
 import numpy as np
-import functions as f
+from DCT_DWT_SVD_watermarking_technique import functions as f
 from os import listdir
 from os.path import isfile, join
 from scipy.signal import convolve2d

@@ -55,7 +55,24 @@ def switch(val, watermark):
         for path in image_path:
             functionsAlgorithms.DWT_DCT_SVD(path, watermark)
     if val == "DCT_DWT_SVD_npy":
-        embedDCT.main()
+        embed.main()
+    if val == "Launch All":
+        for path in image_path:
+            print("Encoding...")
+            res = encode.main(path, watermark)
+            print("Decoding...")
+            decode.main(path, res)
+            DWT_DCT_technique.w2d(path, watermark)
+            DWT_SVD_technique.launch(path, watermark)
+            res = embedDCT.main(path, watermark)
+            extract.main(res)
+            functionsAlgorithms.DWT(path, watermark)
+            functionsAlgorithms.DCT(path, watermark)
+            functionsAlgorithms.DFT(path, watermark)
+            functionsAlgorithms.SVD(path, watermark)
+            functionsAlgorithms.DWT_SVD(path, watermark)
+            functionsAlgorithms.DWT_DCT_SVD(path, watermark)
+        embed.main()
     if val == "Exit":
         print("No embedding selected")
 
@@ -75,10 +92,11 @@ options = {"1": "DFT-BlindWatermark",
            "9": "DWT_SVD",
            "10": "DWT_DCT_SVD",
            "11": "DCT_DWT_SVD_npy",
-           "12": "Exit"
+           "12": "Launch All",
+           "13": "Exit"
 
                }
-val = input('What type of embedding you want to perform?\n1.DFT-BlindWatermark\n2.DWT-DCT Watermarking\n3.DWT-SVD Watermarking\n4.DCT Watermarking\n5.DWTonly\n6.DCTonly\n7.DFTonly\n8.SVDonly\n9.DWT_SVD\n10.DWT_DCT_SVD\n11.DCT_DWT_SVD_npy\n12.Exit')
+val = input('What type of embedding you want to perform?\n1.DFT-BlindWatermark\n2.DWT-DCT Watermarking\n3.DWT-SVD Watermarking\n4.DCT Watermarking\n5.DWTonly\n6.DCTonly\n7.DFTonly\n8.SVDonly\n9.DWT_SVD\n10.DWT_DCT_SVD\n11.DCT_DWT_SVD_npy\n12.Launch All\n13.Exit\nType:')
 print("Running " + options[val])
 
 switch(options[val], watermark)
@@ -97,6 +115,11 @@ def switchTesting(val):
         check_diffs.main()
     if val == "Test Attacks on image":
         test_attacks.main()
+    if val == "Testing All":
+        for path in image_path:
+            ber.main(path)
+        check_diffs.main()
+        test_attacks.main()
     if val == "Exit":
         print("No testing selected")
 
@@ -107,11 +130,12 @@ def switchTesting(val):
 optionsTesting = {"1": "Bit Error Ratio",
            "2": "Check Differences between images",
            "3": "Test Attacks on image",
-           "4": "Exit"
+           "4": "Testing All",
+           "5": "Exit"
 
 
                }
-valTesting = input('What type of testing you want to perform?\n1.Bit Error Ratio\n2.Check Differences between images\n3.Test Attacks on image\n4.Exit')
+valTesting = input('What type of testing you want to perform?\n1.Bit Error Ratio\n2.Check Differences between images\n3.Test Attacks on image\n4.Testing All\n5.Exit\nType:')
 print("Running " + optionsTesting[valTesting])
 switchTesting(optionsTesting[valTesting])
 
