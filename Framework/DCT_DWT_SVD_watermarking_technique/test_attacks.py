@@ -1,9 +1,9 @@
 from DCT_DWT_SVD_watermarking_technique import attacks
-from DCT_DWT_SVD_watermarking_technique.embed import *
-
-from DCT_DWT_SVD_watermarking_technique.wpsnr import *
+from DCT_DWT_SVD_watermarking_technique import embed
+import numpy as np
+from DCT_DWT_SVD_watermarking_technique import wpsnr
 from DCT_DWT_SVD_watermarking_technique import detection
-
+from skimage.metrics import structural_similarity
 import cv2
 
 from os import listdir
@@ -19,6 +19,7 @@ def main():
     results = []
     thisImageResults = []
     attacksFunctions = [attacks.awgn, attacks.blur, attacks.sharpening, attacks.median, attacks.resizing, attacks.jpeg_compression]
+    attacchi = ["awgn", "blur", "sharpening", "median", "resizing", "jpeg_compression"]
     str_arr = [1, 0.5,  1,  1, 1, 90] # parametri partenza
     alpha_arr = [0.5, 0.5, 0.5, 2, -0.5, -5] # incrementi
 
@@ -43,20 +44,22 @@ def main():
         watermarked = cv2.imread(watermarkedPath, 0)
 
         res_att = np.copy(watermarked)
-        for c in range(6):
-            wpsnr = 36
-            found = 1
+        for c in range(6):  #Dove range(6) indica lo spazio dei possibili attacchi
+            wpsnr = 36      #Parametro standard, 36 rappresenta il valore limite oltre il quale l'immagine perde troppa qualità
+            found = 1       #Maggiore è il PSNR, migliore è la qualità dell'immagine compressa o ricostruita
             strength = str_arr[c]
             alpha = alpha_arr[c]
             failed_att = 0
+            iteration=0
             while found == 1 and wpsnr >= 35 and failed_att == 0:
                 strength += alpha
                 print(attacks.attack_name(c))
                 res_att = attacksFunctions[c](watermarked, strength)
                 res_att = np.rint(res_att).astype(int)
                 cv2.imwrite('./DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp', res_att)
+                iteration=iteration + 1
 
-                found, wpsnr =detection.detection(originalPath, watermarkedPath, './DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp')
+                found, wpsnr =detection.detection(originalPath, watermarkedPath, './DCT_DWT_SVD_watermarking_technique/tempImage/tmp.bmp', imageName, groupName, iteration, attacchi[c] )
 
 
                 if wpsnr < 35:

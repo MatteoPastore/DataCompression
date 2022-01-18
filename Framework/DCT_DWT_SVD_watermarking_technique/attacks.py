@@ -14,7 +14,7 @@ def append_list_as_row(file_name, list_of_elem):
 
 ########################## attacks ######################################
 
-def awgn(img, std, seed=123):
+def awgn(img, std, seed=123):       #rumore gaussiano
     mean = 0.0  # some constant
     np.random.seed(seed)
     attacked = img + np.random.normal(mean, std, img.shape)

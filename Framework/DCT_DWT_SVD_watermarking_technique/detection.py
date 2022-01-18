@@ -1,6 +1,6 @@
 import cv2
-from DCT_DWT_SVD_watermarking_technique import *
 from DCT_DWT_SVD_watermarking_technique.wpsnr import wpsnr
+from DCT_DWT_SVD_watermarking_technique import berWatermark
 from scipy.fft import dct, idct
 import numpy as np
 import pywt
@@ -65,14 +65,15 @@ def extractWatermark(original, watermarkedImage):
 
 
     returnWatermark = extractedWatermarkLL*extractWeight[0]+extractedWatermarkLH*extractWeight[1]+extractedWatermarkHL*extractWeight[2]+extractedWatermarkHH*extractWeight[3]
-    # returnWatermark = returnWatermark.round()
 
+    # returnWatermark = returnWatermark.round()
+    returnWatermark2=returnWatermark
     returnWatermark = returnWatermark.flatten()
 
-    return returnWatermark
+    return returnWatermark, returnWatermark2
 
 
-def detection(input1, input2, input3):
+def detection(input1, input2, input3, input4, input5, iteration, attacco):
     original = cv2.imread(input1, 0)
     watermarked = cv2.imread(input2, 0)
     attacked = cv2.imread(input3, 0)
@@ -81,11 +82,14 @@ def detection(input1, input2, input3):
     attacked = cv2.resize(attacked, (512, 512))
 
 
-    watermark = extractWatermark(original, watermarked)
-    attackedWat = extractWatermark(original, attacked)
+    watermark, watermark2 = extractWatermark(original, watermarked)
+    attackedWat, attackedWat2 = extractWatermark(original, attacked)
     output1 = 0
     if(similarity(watermark, attackedWat) > THRESHOLD):
       output1 = 1
+
+      berWatermark.main(watermark2, attackedWat2, input4, input5, iteration, attacco)
+
 
     output2 = wpsnr(watermarked, attacked)
     return output1, output2
