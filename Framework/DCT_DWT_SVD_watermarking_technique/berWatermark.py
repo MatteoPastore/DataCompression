@@ -91,28 +91,26 @@ def toBMP(img1, img2, input4, input5, iteration, attacco):
 
 ################################
 
-
-    return imgList, watermarkList
-
-
-
-def calcBER(data1, data2):
-    if len(data1) != len(data2):
+    if len(imgList) != len(watermarkList):
         print('The input data have different length.')
         print('Please give data with the same length.')
         sys.exit()
 
     error_bits = 0
-    for (d1, d2) in zip(data1, data2):
+    for (d1, d2) in zip(imgList, watermarkList):
         if d1 != d2:
-
             error_bits += 1
 
-    data_len = len(data1)
-    #ber definito come il numero di bit diversi nel watermark estratto rispetto l'originale / il numero di bit del watermark originale
+    data_len = len(imgList)
+    # ber definito come il numero di bit diversi nel watermark estratto rispetto l'originale / il numero di bit del watermark originale
     ber = (error_bits / data_len) * 100
 
     return ber
+
+
+
+
+
 
 def main(img1, img2, input4, input5, iteration, attacco):
 
@@ -120,9 +118,9 @@ def main(img1, img2, input4, input5, iteration, attacco):
 
 
 
-    data1, data2 = toBMP(img1, img2, input4, input5, iteration, attacco)
+    ber = toBMP(img1, img2, input4, input5, iteration, attacco)
 
-    ber = calcBER(data1, data2)
+
     print("Bit error ratio between watermark and attackedWatermark is ")
     print(ber)
 
