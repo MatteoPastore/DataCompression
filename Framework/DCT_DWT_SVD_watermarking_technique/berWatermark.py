@@ -38,10 +38,6 @@ def toBMP(img1, img2, input4, input5, iteration, attacco):
 
 
 
-
-
-
-
 ##############################
 
 
@@ -124,7 +120,7 @@ def main(img1, img2, input4, input5, iteration, attacco):
     print("Bit error ratio between watermark and attackedWatermark is ")
     print(ber)
 
-    saveThis = [input4, input5, ber]
+    saveThis = [input4, input5, ber, attacco, iteration]
     attacks.append_list_as_row('./Testing/Ber/Ber.csv', saveThis)
 
     filelist = glob.glob(os.path.join("./Testing/Ber", "*.bmp"))

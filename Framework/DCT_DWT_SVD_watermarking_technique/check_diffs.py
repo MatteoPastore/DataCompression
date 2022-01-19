@@ -52,10 +52,10 @@ def main():
 
         plt.subplot(11, 18, i)
         plt.title(f'{imageName}_{groupName}', fontsize=5)
-        plt.savefig('./Testing/Check_Diffs/Diffs.png', dpi = 100)
         plt.imshow(diff)
+        plt.savefig('./Testing/Check_Diffs/Diffs.png', dpi=100)
 
-        plt.show()
+        #plt.show()
 ####################################################
 # Compute SSIM between two images
         (score, diff) = structural_similarity(original, watermarked, full=True)
@@ -90,7 +90,7 @@ def main():
         #cv2.imshow('diff', diff)
         #cv2.imshow('mask', mask)
         #cv2.imshow('filled after', filled_after)
-        cv2.waitKey(0)
+        #cv2.waitKey(0)
 
 
 
