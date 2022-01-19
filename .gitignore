@@ -4,3 +4,7 @@
 .DS_Store
 
 Framework/Testing/Ber/plotDiffs/
+
+Framework/__pycache__/
+
+Framework/Blind_Watermark/__pycache__/
