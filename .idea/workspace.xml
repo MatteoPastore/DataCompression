@@ -2,44 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="365f9ce1-f742-47df-908c-7a73ab294f41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/check_diffs.py" beforeDir="false" afterPath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/check_diffs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/tmp.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/FabioDavide/DCT_DWT_SVD_watermarking_technique/tmp.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedcameraman.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedhouse.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedjetplane.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlake.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_color_256.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_color_512.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_gray_256.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlena_gray_512.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedlivingroom.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedmandril_color.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedmandril_gray.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpeppers_color.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpeppers_gray.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedpirate.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwalkbridge.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwoman_blonde.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Decodedwoman_darkhair.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedcameraman.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedhouse.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedjetplane.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlake.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_color_256.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_color_512.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_gray_256.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlena_gray_512.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedlivingroom.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedmandril_color.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedmandril_gray.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpeppers_color.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpeppers_gray.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedpirate.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwalkbridge.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwoman_blonde.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/Watermarkedwoman_darkhair.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FabioDavide/Immagini con watermark + estrazione watermark (decoded)/a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique/tmp.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/originalCode/DCT_DWT_SVD_watermarking_technique/tmp.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
