@@ -8,3 +8,11 @@ Framework/Testing/Ber/plotDiffs/
 Framework/__pycache__/
 
 Framework/Blind_Watermark/__pycache__/
+
+Framework/Robust_Watermarking/__pycache__/
+
+Framework/DCT_DWT_SVD_watermarking_technique/__pycache__/
+
+Framework/DWT_DCT_Image_Watermarking/__pycache__/
+
+Framework/DWT_SVD/__pycache__/
